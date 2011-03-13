@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DA2E7E1132D6DC100985306 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA2E7E0132D6DC100985306 /* UIKit.framework */; };
+		6DA2E7E3132D6DC100985306 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA2E7E2132D6DC100985306 /* Foundation.framework */; };
+		6DA2E7E5132D6DC100985306 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA2E7E4132D6DC100985306 /* CoreGraphics.framework */; };
+		6DA2E7EB132D6DC100985306 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DA2E7E9132D6DC100985306 /* InfoPlist.strings */; };
+		6DA2E7EE132D6DC100985306 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA2E7ED132D6DC100985306 /* main.m */; };
+		6DA2E7F1132D6DC100985306 /* DDProgressViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA2E7F0132D6DC100985306 /* DDProgressViewAppDelegate.m */; };
+		6DA2E7F4132D6DC100985306 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA2E7F2132D6DC100985306 /* MainWindow.xib */; };
+		6DA2E7F7132D6DC100985306 /* DDProgressViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA2E7F6132D6DC100985306 /* DDProgressViewViewController.m */; };
+		6DA2E7FA132D6DC100985306 /* DDProgressViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA2E7F8132D6DC100985306 /* DDProgressViewViewController.xib */; };
+		6DA2E802132D6E2E00985306 /* DDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA2E801132D6E2D00985306 /* DDProgressView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6DA2E7DC132D6DC100985306 /* DDProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA2E7E0132D6DC100985306 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6DA2E7E2132D6DC100985306 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6DA2E7E4132D6DC100985306 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6DA2E7E8132D6DC100985306 /* DDProgressView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDProgressView-Info.plist"; sourceTree = "<group>"; };
+		6DA2E7EA132D6DC100985306 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6DA2E7EC132D6DC100985306 /* DDProgressView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDProgressView-Prefix.pch"; sourceTree = "<group>"; };
+		6DA2E7ED132D6DC100985306 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6DA2E7EF132D6DC100985306 /* DDProgressViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDProgressViewAppDelegate.h; sourceTree = "<group>"; };
+		6DA2E7F0132D6DC100985306 /* DDProgressViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDProgressViewAppDelegate.m; sourceTree = "<group>"; };
+		6DA2E7F3132D6DC100985306 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		6DA2E7F5132D6DC100985306 /* DDProgressViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDProgressViewViewController.h; sourceTree = "<group>"; };
+		6DA2E7F6132D6DC100985306 /* DDProgressViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDProgressViewViewController.m; sourceTree = "<group>"; };
+		6DA2E7F9132D6DC100985306 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DDProgressViewViewController.xib; sourceTree = "<group>"; };
+		6DA2E800132D6E2D00985306 /* DDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProgressView.h; sourceTree = "<group>"; };
+		6DA2E801132D6E2D00985306 /* DDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProgressView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DA2E7D9132D6DC100985306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA2E7E1132D6DC100985306 /* UIKit.framework in Frameworks */,
+				6DA2E7E3132D6DC100985306 /* Foundation.framework in Frameworks */,
+				6DA2E7E5132D6DC100985306 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DA2E7D1132D6DC100985306 = {
+			isa = PBXGroup;
+			children = (
+				6DA2E7E6132D6DC100985306 /* DDProgressView */,
+				6DA2E7DF132D6DC100985306 /* Frameworks */,
+				6DA2E7DD132D6DC100985306 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6DA2E7DD132D6DC100985306 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DA2E7DC132D6DC100985306 /* DDProgressView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DA2E7DF132D6DC100985306 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DA2E7E0132D6DC100985306 /* UIKit.framework */,
+				6DA2E7E2132D6DC100985306 /* Foundation.framework */,
+				6DA2E7E4132D6DC100985306 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DA2E7E6132D6DC100985306 /* DDProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				6DA2E800132D6E2D00985306 /* DDProgressView.h */,
+				6DA2E801132D6E2D00985306 /* DDProgressView.m */,
+				6DA2E7EF132D6DC100985306 /* DDProgressViewAppDelegate.h */,
+				6DA2E7F0132D6DC100985306 /* DDProgressViewAppDelegate.m */,
+				6DA2E7F2132D6DC100985306 /* MainWindow.xib */,
+				6DA2E7F5132D6DC100985306 /* DDProgressViewViewController.h */,
+				6DA2E7F6132D6DC100985306 /* DDProgressViewViewController.m */,
+				6DA2E7F8132D6DC100985306 /* DDProgressViewViewController.xib */,
+				6DA2E7E7132D6DC100985306 /* Supporting Files */,
+			);
+			path = DDProgressView;
+			sourceTree = "<group>";
+		};
+		6DA2E7E7132D6DC100985306 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DA2E7E8132D6DC100985306 /* DDProgressView-Info.plist */,
+				6DA2E7E9132D6DC100985306 /* InfoPlist.strings */,
+				6DA2E7EC132D6DC100985306 /* DDProgressView-Prefix.pch */,
+				6DA2E7ED132D6DC100985306 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DA2E7DB132D6DC100985306 /* DDProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DA2E7FD132D6DC100985306 /* Build configuration list for PBXNativeTarget "DDProgressView" */;
+			buildPhases = (
+				6DA2E7D8132D6DC100985306 /* Sources */,
+				6DA2E7D9132D6DC100985306 /* Frameworks */,
+				6DA2E7DA132D6DC100985306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDProgressView;
+			productName = DDProgressView;
+			productReference = 6DA2E7DC132D6DC100985306 /* DDProgressView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DA2E7D3132D6DC100985306 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Acrossair;
+			};
+			buildConfigurationList = 6DA2E7D6132D6DC100985306 /* Build configuration list for PBXProject "DDProgressView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6DA2E7D1132D6DC100985306;
+			productRefGroup = 6DA2E7DD132D6DC100985306 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DA2E7DB132D6DC100985306 /* DDProgressView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6DA2E7DA132D6DC100985306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA2E7EB132D6DC100985306 /* InfoPlist.strings in Resources */,
+				6DA2E7F4132D6DC100985306 /* MainWindow.xib in Resources */,
+				6DA2E7FA132D6DC100985306 /* DDProgressViewViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DA2E7D8132D6DC100985306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA2E7EE132D6DC100985306 /* main.m in Sources */,
+				6DA2E7F1132D6DC100985306 /* DDProgressViewAppDelegate.m in Sources */,
+				6DA2E7F7132D6DC100985306 /* DDProgressViewViewController.m in Sources */,
+				6DA2E802132D6E2E00985306 /* DDProgressView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6DA2E7E9132D6DC100985306 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DA2E7EA132D6DC100985306 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6DA2E7F2132D6DC100985306 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DA2E7F3132D6DC100985306 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		6DA2E7F8132D6DC100985306 /* DDProgressViewViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DA2E7F9132D6DC100985306 /* en */,
+			);
+			name = DDProgressViewViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6DA2E7FB132D6DC100985306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6DA2E7FC132D6DC100985306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		6DA2E7FE132D6DC100985306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDProgressView/DDProgressView-Prefix.pch";
+				INFOPLIST_FILE = "DDProgressView/DDProgressView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6DA2E7FF132D6DC100985306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDProgressView/DDProgressView-Prefix.pch";
+				INFOPLIST_FILE = "DDProgressView/DDProgressView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DA2E7D6132D6DC100985306 /* Build configuration list for PBXProject "DDProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DA2E7FB132D6DC100985306 /* Debug */,
+				6DA2E7FC132D6DC100985306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DA2E7FD132D6DC100985306 /* Build configuration list for PBXNativeTarget "DDProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DA2E7FE132D6DC100985306 /* Debug */,
+				6DA2E7FF132D6DC100985306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DA2E7D3132D6DC100985306 /* Project object */;
+}
