@@ -27,13 +27,14 @@
     
 	[self.view setBackgroundColor: [UIColor blackColor]] ;
 	
-    progressView = [[DDProgressView alloc] initWithFrame: CGRectMake(20.0f, 140.0f, self.view.bounds.size.width-40.0f, 0.0f)] ;
-	[progressView setTintColor: [UIColor lightGrayColor]] ;
-    [self.view addSubview: progressView] ;
-    [progressView release] ;
+	progressView = [[DDProgressView alloc] initWithFrame: CGRectMake(20.0f, 140.0f, self.view.bounds.size.width-40.0f, 0.0f)] ;
+	[progressView setOuterColor: [UIColor grayColor]] ;
+	[progressView setInnerColor: [UIColor lightGrayColor]] ;
+	[self.view addSubview: progressView] ;
+	[progressView release] ;
 	
 	// set a timer that updates the progress
-	NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 0.1f target: self selector: @selector(updateProgress) userInfo: nil repeats: YES] ;
+	NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 0.03f target: self selector: @selector(updateProgress) userInfo: nil repeats: YES] ;
 	[timer fire] ;
 }
 

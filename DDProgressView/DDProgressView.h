@@ -12,10 +12,12 @@
 {
 @private
 	float progress ;
-	UIColor *tintColor ;
+	UIColor *innerColor ;
+	UIColor *outerColor ;
 }
 
-@property (nonatomic,retain) UIColor *tintColor ;
+@property (nonatomic,retain) UIColor *innerColor ;
+@property (nonatomic,retain) UIColor *outerColor ;
 @property (nonatomic,assign) float progress ;
 
 @end

@@ -9,10 +9,12 @@
 #import "DDProgressView.h"
 
 #define kProgressBarHeight  22.0f
+#define kProgressBarWidth	160.0f
 
 @implementation DDProgressView
 
-@synthesize tintColor ;
+@synthesize innerColor ;
+@synthesize outerColor ;
 @synthesize progress ;
 
 - (id)init
@@ -26,24 +28,32 @@
 	if (self)
 	{
 		self.backgroundColor = [UIColor clearColor] ;
+		self.innerColor = [UIColor lightGrayColor] ;
+		self.outerColor = [UIColor lightGrayColor] ;
+		if (frame.size.width == 0.0f)
+			frame.size.width = kProgressBarWidth ;
 	}
 	return self ;
 }
 
 - (void)dealloc
 {
-	[tintColor release], tintColor = nil ;
+	[innerColor release], innerColor = nil ;
+	[outerColor release], outerColor = nil ;
 	
 	[super dealloc] ;
 }
 
 - (void)setProgress:(float)theProgress
 {
-	if (theProgress >= 0.0f && theProgress <= 1.0f)
-	{
-		progress = theProgress ;
-		[self setNeedsDisplay] ;
-	}
+	// make sure the user does not try to set the progress outside of the bounds
+	if (theProgress > 1.0f)
+		theProgress = 1.0f ;
+	if (theProgress < 0.0f)
+		theProgress = 0.0f ;
+	
+	progress = theProgress ;
+	[self setNeedsDisplay] ;
 }
 
 - (void)setFrame:(CGRect)frame
@@ -74,7 +84,7 @@
 	rect = CGRectInset(rect, 1.0f, 1.0f) ;
 	CGFloat radius = 0.5f * rect.size.height ;
     
-	CGContextSetStrokeColorWithColor(context, tintColor.CGColor) ;
+	CGContextSetStrokeColorWithColor(context, outerColor.CGColor) ;
 	CGContextSetLineWidth(context, 2.0f) ;
 	
 	CGContextBeginPath(context) ;
@@ -95,7 +105,7 @@
 	if (rect.size.width < 2 * radius)
 		rect.size.width = 2 * radius ;
 	
-	CGContextSetFillColorWithColor(context, tintColor.CGColor) ;
+	CGContextSetFillColorWithColor(context, innerColor.CGColor) ;
 	
 	CGContextBeginPath(context) ;
 	CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMidY(rect)) ;
