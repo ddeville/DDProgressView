@@ -3,13 +3,16 @@
 //  DDProgressView
 //
 //  Created by Damien DeVille on 3/13/11.
-//  Copyright 2011 Acrossair. All rights reserved.
+//  Copyright 2011 Snappy Code. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface DDProgressViewViewController : UIViewController {
-    
+@class DDProgressView ;
+
+@interface DDProgressViewViewController : UIViewController
+{
+    DDProgressView *progressView ;
 }
 
 @end

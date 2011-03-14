@@ -3,7 +3,7 @@
 //  DDProgressView
 //
 //  Created by Damien DeVille on 3/13/11.
-//  Copyright 2011 Acrossair. All rights reserved.
+//  Copyright 2011 Snappy Code. All rights reserved.
 //
 
 #import "DDProgressViewAppDelegate.h"
@@ -12,18 +12,14 @@
 
 @implementation DDProgressViewAppDelegate
 
-
-@synthesize window=_window;
-
-@synthesize viewController=_viewController;
+@synthesize window = _window ;
+@synthesize viewController = _viewController ;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-     
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
-    return YES;
+    self.window.rootViewController = self.viewController ;
+    [self.window makeKeyAndVisible] ;
+    return YES ;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -67,9 +63,10 @@
 
 - (void)dealloc
 {
-    [_window release];
-    [_viewController release];
-    [super dealloc];
+    [_window release] ;
+    [_viewController release] ;
+    
+    [super dealloc] ;
 }
 
 @end

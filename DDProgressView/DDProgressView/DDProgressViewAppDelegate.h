@@ -3,19 +3,19 @@
 //  DDProgressView
 //
 //  Created by Damien DeVille on 3/13/11.
-//  Copyright 2011 Acrossair. All rights reserved.
+//  Copyright 2011 Snappy Code. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@class DDProgressViewViewController;
+@class DDProgressViewViewController ;
 
-@interface DDProgressViewAppDelegate : NSObject <UIApplicationDelegate> {
-
+@interface DDProgressViewAppDelegate : NSObject <UIApplicationDelegate>
+{
+    
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-
-@property (nonatomic, retain) IBOutlet DDProgressViewViewController *viewController;
+@property (nonatomic, retain) IBOutlet UIWindow *window ;
+@property (nonatomic, retain) IBOutlet DDProgressViewViewController *viewController ;
 
 @end

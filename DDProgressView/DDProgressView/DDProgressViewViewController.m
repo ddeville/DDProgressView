@@ -3,46 +3,53 @@
 //  DDProgressView
 //
 //  Created by Damien DeVille on 3/13/11.
-//  Copyright 2011 Acrossair. All rights reserved.
+//  Copyright 2011 Snappy Code. All rights reserved.
 //
 
 #import "DDProgressViewViewController.h"
+#import "DDProgressView.h"
 
 @implementation DDProgressViewViewController
 
 - (void)dealloc
 {
-    [super dealloc];
+    [super dealloc] ;
 }
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+    [super didReceiveMemoryWarning] ;
 }
 
-#pragma mark - View lifecycle
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    [super viewDidLoad] ;
+    
+	[self.view setBackgroundColor: [UIColor blackColor]] ;
+	
+    progressView = [[DDProgressView alloc] initWithFrame: CGRectMake(20.0f, 140.0f, self.view.bounds.size.width-40.0f, 0.0f)] ;
+	[progressView setTintColor: [UIColor lightGrayColor]] ;
+    [self.view addSubview: progressView] ;
+    [progressView release] ;
+	
+	// set a timer that updates the progress
+	NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 0.1f target: self selector: @selector(updateProgress) userInfo: nil repeats: YES] ;
+	[timer fire] ;
 }
-*/
+
+- (void)updateProgress
+{
+	float progress = progressView.progress ;
+	[progressView setProgress: progress + 0.01f] ;
+}
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    [super viewDidUnload] ;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
