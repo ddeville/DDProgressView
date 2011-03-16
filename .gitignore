@@ -1,37 +1,35 @@
-# Mac OS X Finder and whatnot
+# OS X
 .DS_Store
+.DS_store
+profile
 
-# XCode (and ancestors) per-user config (very noisy, and not relevant)
-*.mode1
-*.mode1v3
-*.mode2v3
-*.perspective
-*.perspectivev3
-*.pbxuser
+# XCode
+*.mode*
+*.perspective*
+*.pbxuser*
+*tmproj
+External/GHUnit/*
+PLBlocks.framework/*
+*.pyc
 
-#for Xcode 4
+# for Xcode 4
 xcuserdata
 *.xcworkspace
 
-# Generated files
-VersionX-revision.h
-
-
-# build products
-build/
+# built products
+build
 *.o
 
-# Other source repository archive directories (protects when importing)
+# Other source repository archive directories
 .hg
 .svn
 CVS
 
-
-# automatic backup files
-*~.nib
+# Automatic backup files
+#~.nib/
 *.swp
 *~
 *(Autosaved).rtfd/
 Backup[ ]of[ ]*.pages/
-Backup[ ]of[ ]*.key/
+Backup[ ]of[ ]*.key/                
 Backup[ ]of[ ]*.numbers/
