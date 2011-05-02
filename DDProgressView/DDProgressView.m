@@ -84,7 +84,7 @@
 	rect = CGRectInset(rect, 1.0f, 1.0f) ;
 	CGFloat radius = 0.5f * rect.size.height ;
     
-	CGContextSetStrokeColorWithColor(context, outerColor.CGColor) ;
+	[outerColor setStroke] ;
 	CGContextSetLineWidth(context, 2.0f) ;
 	
 	CGContextBeginPath(context) ;
@@ -105,7 +105,7 @@
 	if (rect.size.width < 2 * radius)
 		rect.size.width = 2 * radius ;
 	
-	CGContextSetFillColorWithColor(context, innerColor.CGColor) ;
+	[innerColor setFill] ;
 	
 	CGContextBeginPath(context) ;
 	CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMidY(rect)) ;
