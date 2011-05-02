@@ -6,7 +6,11 @@
 //  Copyright 2011 Snappy Code. All rights reserved.
 //
 
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#elif TARGET_OS_MAC
+#import "AppKitCompatibility.h"
+#endif
 
 @interface DDProgressView : UIView
 {

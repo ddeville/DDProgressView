@@ -36,6 +36,8 @@
 		6DA2E7F9132D6DC100985306 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DDProgressViewViewController.xib; sourceTree = "<group>"; };
 		6DA2E800132D6E2D00985306 /* DDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProgressView.h; sourceTree = "<group>"; };
 		6DA2E801132D6E2D00985306 /* DDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProgressView.m; sourceTree = "<group>"; };
+		DA8635BA136EEA8000776109 /* AppKitCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppKitCompatibility.h; sourceTree = "<group>"; };
+		DA8635BB136EEA8000776109 /* AppKitCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppKitCompatibility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,8 @@
 		6DA2E7E6132D6DC100985306 /* DDProgressView */ = {
 			isa = PBXGroup;
 			children = (
+				DA8635BA136EEA8000776109 /* AppKitCompatibility.h */,
+				DA8635BB136EEA8000776109 /* AppKitCompatibility.m */,
 				6DA2E800132D6E2D00985306 /* DDProgressView.h */,
 				6DA2E801132D6E2D00985306 /* DDProgressView.m */,
 				6DA2E7EF132D6DC100985306 /* DDProgressViewAppDelegate.h */,
@@ -285,6 +289,7 @@
 				6DA2E7FF132D6DC100985306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
