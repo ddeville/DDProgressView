@@ -8,4 +8,4 @@ DDProgressView works on both iOS and Mac OS. You must also compile the `AppKitCo
 Screenshot
 ==========
 
-![Gray on Black DDProgressView](Screenshot.png)
+![Gray on Black DDProgressView](https://github.com/0xced/DDProgressView/raw/master/Screenshot.png)
