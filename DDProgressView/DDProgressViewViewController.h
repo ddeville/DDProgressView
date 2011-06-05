@@ -12,11 +12,11 @@
 
 @interface DDProgressViewViewController : UIViewController
 {
-    float   testProgress;
-    int     progressDir;
+    float   testProgress ;
+    int     progressDir ;
     
     DDProgressView *progressView ;    
-    DDProgressView  *progressView2;
+    DDProgressView *progressView2 ;
 }
 
 @end
