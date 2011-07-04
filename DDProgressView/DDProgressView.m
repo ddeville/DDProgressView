@@ -31,7 +31,7 @@
 		self.backgroundColor = [UIColor clearColor] ;
 		self.innerColor = [UIColor lightGrayColor] ;
 		self.outerColor = [UIColor lightGrayColor] ;
-        self.emptyColor = [UIColor clearColor] ;
+		self.emptyColor = [UIColor clearColor] ;
 		if (frame.size.width == 0.0f)
 			frame.size.width = kProgressBarWidth ;
 	}
@@ -42,7 +42,7 @@
 {
 	[innerColor release], innerColor = nil ;
 	[outerColor release], outerColor = nil ;
-    [emptyColor release], emptyColor = nil ;
+	[emptyColor release], emptyColor = nil ;
 	
 	[super dealloc] ;
 }

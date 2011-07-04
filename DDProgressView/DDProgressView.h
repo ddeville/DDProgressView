@@ -18,7 +18,7 @@
 	float progress ;
 	UIColor *innerColor ;
 	UIColor *outerColor ;
-    UIColor *emptyColor;
+    UIColor *emptyColor ;
 }
 
 @property (nonatomic,retain) UIColor *innerColor ;
