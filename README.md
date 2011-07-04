@@ -9,3 +9,4 @@ Screenshot
 ==========
 
 ![Gray on Black DDProgressView](https://github.com/0xced/DDProgressView/raw/master/Screenshot.png)
+![DDProgressView using the emptyColor property](https://github.com/0xced/DDProgressView/raw/master/Screenshot2.png)
