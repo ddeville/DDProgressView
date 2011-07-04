@@ -15,6 +15,7 @@
 
 @synthesize innerColor ;
 @synthesize outerColor ;
+@synthesize emptyColor ;
 @synthesize progress ;
 
 - (id)init
@@ -30,6 +31,7 @@
 		self.backgroundColor = [UIColor clearColor] ;
 		self.innerColor = [UIColor lightGrayColor] ;
 		self.outerColor = [UIColor lightGrayColor] ;
+        self.emptyColor = [UIColor clearColor] ;
 		if (frame.size.width == 0.0f)
 			frame.size.width = kProgressBarWidth ;
 	}
@@ -40,6 +42,7 @@
 {
 	[innerColor release], innerColor = nil ;
 	[outerColor release], outerColor = nil ;
+    [emptyColor release], emptyColor = nil ;
 	
 	[super dealloc] ;
 }
@@ -96,8 +99,22 @@
 	CGContextClosePath(context) ;
 	CGContextDrawPath(context, kCGPathStroke) ;
     
+    // draw the empty rounded rectangle (shown for the "unfilled" portions of the progress
+    rect = CGRectInset(rect, 3.0f, 3.0f) ;
+	radius = 0.5f * rect.size.height ;
+	
+	[emptyColor setFill] ;
+	
+	CGContextBeginPath(context) ;
+	CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMidY(rect)) ;
+	CGContextAddArcToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect), CGRectGetMidX(rect), CGRectGetMinY(rect), radius) ;
+	CGContextAddArcToPoint(context, CGRectGetMaxX(rect), CGRectGetMinY(rect), CGRectGetMaxX(rect), CGRectGetMidY(rect), radius) ;
+	CGContextAddArcToPoint(context, CGRectGetMaxX(rect), CGRectGetMaxY(rect), CGRectGetMidX(rect), CGRectGetMaxY(rect), radius) ;
+	CGContextAddArcToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect), CGRectGetMinX(rect), CGRectGetMidY(rect), radius) ;
+	CGContextClosePath(context) ;
+	CGContextFillPath(context) ;
+    
 	// draw the inside moving filled rounded rectangle
-	rect = CGRectInset(rect, 3.0f, 3.0f) ;
 	radius = 0.5f * rect.size.height ;
 	
 	// make sure the filled rounded rectangle is not smaller than 2 times the radius
