@@ -17,6 +17,7 @@
 @synthesize outerColor ;
 @synthesize emptyColor ;
 @synthesize progress ;
+@synthesize useRoundedCorners ;
 
 - (id)init
 {
@@ -32,6 +33,7 @@
 		self.innerColor = [UIColor lightGrayColor] ;
 		self.outerColor = [UIColor lightGrayColor] ;
 		self.emptyColor = [UIColor clearColor] ;
+        self.useRoundedCorners = NO;
 		if (frame.size.width == 0.0f)
 			frame.size.width = kProgressBarWidth ;
 	}
@@ -85,7 +87,7 @@
 	
 	// we first draw the outter rounded rectangle
 	rect = CGRectInset(rect, 1.0f, 1.0f) ;
-	CGFloat radius = 0.5f * rect.size.height ;
+	CGFloat radius = self.useRoundedCorners? 0.5f * rect.size.height : 0 ;
     
 	[outerColor setStroke] ;
 	CGContextSetLineWidth(context, 2.0f) ;
@@ -101,7 +103,7 @@
     
     // draw the empty rounded rectangle (shown for the "unfilled" portions of the progress
     rect = CGRectInset(rect, 3.0f, 3.0f) ;
-	radius = 0.5f * rect.size.height ;
+	radius = self.useRoundedCorners? 0.5f * rect.size.height : 0 ;
 	
 	[emptyColor setFill] ;
 	
@@ -113,10 +115,7 @@
 	CGContextAddArcToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect), CGRectGetMinX(rect), CGRectGetMidY(rect), radius) ;
 	CGContextClosePath(context) ;
 	CGContextFillPath(context) ;
-    
-	// draw the inside moving filled rounded rectangle
-	radius = 0.5f * rect.size.height ;
-	
+    	
 	// make sure the filled rounded rectangle is not smaller than 2 times the radius
 	rect.size.width *= progress ;
 	if (rect.size.width < 2 * radius)
