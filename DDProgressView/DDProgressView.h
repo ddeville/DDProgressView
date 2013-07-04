@@ -25,5 +25,6 @@
 @property (nonatomic,retain) UIColor *outerColor ;
 @property (nonatomic,retain) UIColor *emptyColor ;
 @property (nonatomic,assign) float progress ;
+@property (nonatomic,assign) CGFloat preferredFrameHeight ;
 
 @end
