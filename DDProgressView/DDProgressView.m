@@ -8,8 +8,8 @@
 
 #import "DDProgressView.h"
 
-#define kProgressBarHeight  22.0f
-#define kProgressBarWidth	160.0f
+#define kDefaultProgressBarHeight   22.0f
+#define kProgressBarWidth           160.0f
 
 @implementation DDProgressView
 
@@ -17,6 +17,7 @@
 @synthesize outerColor ;
 @synthesize emptyColor ;
 @synthesize progress ;
+@synthesize preferredFrameHeight ;
 
 - (id)init
 {
@@ -32,6 +33,7 @@
 		self.innerColor = [UIColor lightGrayColor] ;
 		self.outerColor = [UIColor lightGrayColor] ;
 		self.emptyColor = [UIColor clearColor] ;
+        self.preferredFrameHeight = kDefaultProgressBarHeight;
 		if (frame.size.width == 0.0f)
 			frame.size.width = kProgressBarWidth ;
 	}
@@ -62,14 +64,14 @@
 - (void)setFrame:(CGRect)frame
 {
 	// we set the height ourselves since it is fixed
-	frame.size.height = kProgressBarHeight ;
+	frame.size.height = self.preferredFrameHeight ;
 	[super setFrame: frame] ;
 }
 
 - (void)setBounds:(CGRect)bounds
 {
 	// we set the height ourselves since it is fixed
-	bounds.size.height = kProgressBarHeight ;
+	bounds.size.height = self.preferredFrameHeight ;
 	[super setBounds: bounds] ;
 }
 
