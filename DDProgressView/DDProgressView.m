@@ -123,7 +123,9 @@
 	rect.size.width *= progress ;
 	if (rect.size.width < 2 * radius)
 		rect.size.width = 2 * radius ;
-	
+	if(isnan(rect.size.width)){
+		rect.size.width = 14;
+	}
 	[innerColor setFill] ;
 	
 	CGContextBeginPath(context) ;
